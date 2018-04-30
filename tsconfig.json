@@ -6,7 +6,8 @@
     "experimentalDecorators": true,
     "lib": [
       "dom",
-      "es2015"
+      "es2015",
+      "esnext"
     ],
     "module": "es2015",
     "moduleResolution": "node",
@@ -19,7 +20,8 @@
   "exclude": [
     "node_modules",
     "src/**/*.spec.ts",
-    "src/**/__tests__/*.ts"
+    "src/**/__tests__/*.ts",
+    "node_modules/**/*.d.ts"
   ],
   "compileOnSave": false,
   "atom": {

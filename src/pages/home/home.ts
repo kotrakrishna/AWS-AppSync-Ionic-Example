@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
+import {Apollo} from 'apollo-angular';
+import gql from 'graphql-tag';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +9,16 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(apollo: Apollo) {
+    let q = gql(`
+    query GetProduct {
+      getProduct(id: 1) {
+        id
+        title
+      }
+    }
+`);
+    apollo.query({query: q}).subscribe(console.log);
   }
 
 }
