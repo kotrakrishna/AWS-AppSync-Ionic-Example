@@ -86,3 +86,6 @@ Ignore typescript errors from dependency packages
 ## Run
 
     ionic cordova run browser
+
+
+Github Page: https://kotrakrishna.github.io/AWS-AppSync-Ionic-Example/
